@@ -1,4 +1,8 @@
+
+
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +11,68 @@
     <script src="estudo.js"></script>
     <link rel="stylesheet" href="geral.css">
 </head>
+
 <body>
-<input type="checkbox" id="input-calcF">
+    <input type="checkbox" id="input-calcF">
     <div class="calculadora">
-        <label for="input-calcF"><h4> Financeira</h4/label>
-   <div class="calcF">
-    <div id="spTotal">
-        <span id="total">Total: 0,00</span>
+        <label for="input-calcF"><h5>Calculadora Financeira</h5></label>
+        <div class="calcF">
+        <div id="spTotal">
+            <span id="total">Total: 0,00</span>
+        </div>
+        Capital: <input id="valor" type="text"> <br>
+        Juros Mensais: <input id="juros" type="text"> <br>
+        Número de Meses: <input id="meses" type="text"> <br>
+        <button onclick="total()">
+            enviar
+        </button><br>
+        <div id="spMes">
+            <span id="mes">Meses</span>
+        </div>
     </div>
-    Capital: <input id="valor" type="text"><br>
-    Juros mensais: <input id="juros" type="text"><br>
-    Nr. meses: <input id="meses" type="text"><br>
-    <button onclick="total()"> Enviar</button>
-    <div id="spmes">
-        <span id="mes">Meses</span>
+    </div>
+
+    <input type="checkbox" id="input-calcESG">
+    <div class="calculadoraESG">
+        <label for="input-calcESG"><h5>Calculadora de Equação de Segundo Grau</h5></label>
+        <div class="calcESG">
+        <div id="raiz">
+            <span id="raiz">Raiz: x1 e x2</span>
+        </div>
+        a: <input id="a" placeholder="a" type="text"> <br>
+        b: <input id="b" placeholder="b" type="text"> <br>
+        c: <input id="c" placeholder="c" type="text"> <br>
+        <button onclick="calcularESG()">
+            calcular
+        </button><br>
     </div>
     </div>
-</div>
     <br><br><br><br><br>
-<span id="resul">Resultado: 0,00</span><br>
-Bimestre 1: <input id="b1" type="text"><br>
-Bimestre 2: <input id="b2" type="text"><br>
-Bimestre 3: <input id="b3" type="text"><br>
-Bimestre 4: <input id="b4" type="text"><br>
 
-<button onclick="SomadaNota()">Soma das Notas</button>
+    Bimestre 1: <input id="b1" type="text"><br>
+    Bimestre 2: <input id="b2" type="text"><br>
+    Bimestre 3: <input id="b3" type="text"><br>
+    Bimestre 4: <input id="b4" type="text"><br>
 
-
-<button onclick="resultado()">resultado das Notas</button>
+    <button onclick="somaNota()">
+        Soma das notas:
+    </button>
+    <span id="result">
+        Resultado: 0,00
+    </span><br>
+    <button onclick="media1()">
+        Média
+    </button>
+    <span id="result1">
+        Média: 0,00
+    </span><br>
+    <button onclick="subtracao()">
+        Quanto falta ou sobra para 240?
+    </button>
+    <span id="result2">
+        De 240: 0,00
+    </span><br>
 
 </body>
+
 </html>
